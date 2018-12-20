@@ -1,6 +1,6 @@
-using DotLiquid;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using DotLiquid;
 using VirtoCommerce.Storefront.Model.Common;
 
 namespace VirtoCommerce.LiquidThemeEngine.Objects
@@ -97,6 +97,9 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         /// </summary>
         [DataMember]
         public string Description { get; set; }
+
+        [DataMember]
+        public CustomerReview[] CustomerReviews { get; set; }
 
         /// <summary>
         /// Gets or sets the collection of product descriptions: FullReview, QuickReview, etc.
