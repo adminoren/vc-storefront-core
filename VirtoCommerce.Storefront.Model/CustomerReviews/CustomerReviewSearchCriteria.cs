@@ -19,7 +19,7 @@ namespace VirtoCommerce.Storefront.Model.CustomerReviews
 
         public string[] ProductIds { get; set; }
         public bool? IsActive { get; set; }
+        public string StoreId { get; set; }
         public string Sort { get; set; }
-
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using VirtoCommerce.Storefront.Model.Common;
-using VirtoCommerce.Storefront.Model.CustomerReviews;
 using VirtoCommerce.Storefront.Model.Marketing;
 using VirtoCommerce.Storefront.Model.Subscriptions;
 
@@ -336,8 +335,6 @@ namespace VirtoCommerce.Storefront.Model.Catalog
                 }
             }
         }
-
-        public IMutablePagedList<CustomerReview> CustomerReviews { get; set; }
 
         #region IHasProperties Members
         public IList<CatalogProperty> Properties { get; set; }

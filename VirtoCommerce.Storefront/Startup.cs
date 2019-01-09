@@ -24,6 +24,8 @@ using VirtoCommerce.Storefront.Caching;
 using VirtoCommerce.Storefront.DependencyInjection;
 using VirtoCommerce.Storefront.Domain;
 using VirtoCommerce.Storefront.Domain.Cart;
+using VirtoCommerce.Storefront.Domain.CustomerReview;
+using VirtoCommerce.Storefront.Domain.CustomerReviews;
 using VirtoCommerce.Storefront.Domain.Security;
 using VirtoCommerce.Storefront.Extensions;
 using VirtoCommerce.Storefront.Filters;
@@ -89,6 +91,16 @@ namespace VirtoCommerce.Storefront
             services.AddSingleton<IMemberService, MemberService>();
             services.AddSingleton<ICustomerOrderService, CustomerOrderService>();
             services.AddSingleton<ICustomerReviewService, CustomerReviewService>();
+
+            services.AddSingleton<ICheckRules, MultipleRulesChecker>(x =>
+            {
+                var workContextAccessor = x.GetService<IWorkContextAccessor>();
+                return new MultipleRulesChecker(
+                    new ICheckRule[] {
+                        new AnonymousUserRule(workContextAccessor),
+                        new SpentSumRule(workContextAccessor, new TotalSpentCalculator(workContextAccessor))
+                    });
+            });
             services.AddSingleton<IQuoteService, QuoteService>();
             services.AddSingleton<ISubscriptionService, SubscriptionService>();
             services.AddSingleton<ICatalogService, CatalogService>();

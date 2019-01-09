@@ -2,7 +2,7 @@
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
+namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -16,10 +16,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
     using System.Threading.Tasks;
     using VirtoCommerce.Storefront;
     using VirtoCommerce.Storefront.AutoRestClients;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi;
+    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi;
 
-    public partial class CustomerReviewsWebRESTAPIdocumentation : ServiceClient<CustomerReviewsWebRESTAPIdocumentation>, ICustomerReviewsWebRESTAPIdocumentation
+    public partial class VirtoCommerceCustomerReviewsRESTAPIdocumentation : ServiceClient<VirtoCommerceCustomerReviewsRESTAPIdocumentation>, IVirtoCommerceCustomerReviewsRESTAPIdocumentation
     {
         /// <summary>
         /// The base URI of the service.
@@ -47,18 +46,18 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         public virtual ICustomerReviews CustomerReviews { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of the CustomerReviewsWebRESTAPIdocumentation class.
+        /// Initializes a new instance of the VirtoCommerceCustomerReviewsRESTAPIdocumentation class.
         /// </summary>
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        protected CustomerReviewsWebRESTAPIdocumentation(params DelegatingHandler[] handlers) : base(handlers)
+        protected VirtoCommerceCustomerReviewsRESTAPIdocumentation(params DelegatingHandler[] handlers) : base(handlers)
         {
             Initialize();
         }
 
         /// <summary>
-        /// Initializes a new instance of the CustomerReviewsWebRESTAPIdocumentation class.
+        /// Initializes a new instance of the VirtoCommerceCustomerReviewsRESTAPIdocumentation class.
         /// </summary>
         /// <param name='rootHandler'>
         /// Optional. The http client handler used to handle http transport.
@@ -66,13 +65,13 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        protected CustomerReviewsWebRESTAPIdocumentation(HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : base(rootHandler, handlers)
+        protected VirtoCommerceCustomerReviewsRESTAPIdocumentation(HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : base(rootHandler, handlers)
         {
             Initialize();
         }
 
         /// <summary>
-        /// Initializes a new instance of the CustomerReviewsWebRESTAPIdocumentation class.
+        /// Initializes a new instance of the VirtoCommerceCustomerReviewsRESTAPIdocumentation class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -83,7 +82,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        protected CustomerReviewsWebRESTAPIdocumentation(System.Uri baseUri, params DelegatingHandler[] handlers) : this(handlers)
+        protected VirtoCommerceCustomerReviewsRESTAPIdocumentation(System.Uri baseUri, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (baseUri == null)
             {
@@ -93,7 +92,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         }
 
         /// <summary>
-        /// Initializes a new instance of the CustomerReviewsWebRESTAPIdocumentation class.
+        /// Initializes a new instance of the VirtoCommerceCustomerReviewsRESTAPIdocumentation class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -107,7 +106,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        protected CustomerReviewsWebRESTAPIdocumentation(System.Uri baseUri, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        protected VirtoCommerceCustomerReviewsRESTAPIdocumentation(System.Uri baseUri, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (baseUri == null)
             {
@@ -117,7 +116,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         }
 
         /// <summary>
-        /// Initializes a new instance of the CustomerReviewsWebRESTAPIdocumentation class.
+        /// Initializes a new instance of the VirtoCommerceCustomerReviewsRESTAPIdocumentation class.
         /// </summary>
         /// <param name='credentials'>
         /// Required. Subscription credentials which uniquely identify client subscription.
@@ -128,7 +127,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public CustomerReviewsWebRESTAPIdocumentation(ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
+        public VirtoCommerceCustomerReviewsRESTAPIdocumentation(ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (credentials == null)
             {
@@ -142,7 +141,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         }
 
         /// <summary>
-        /// Initializes a new instance of the CustomerReviewsWebRESTAPIdocumentation class.
+        /// Initializes a new instance of the VirtoCommerceCustomerReviewsRESTAPIdocumentation class.
         /// </summary>
         /// <param name='credentials'>
         /// Required. Subscription credentials which uniquely identify client subscription.
@@ -156,7 +155,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public CustomerReviewsWebRESTAPIdocumentation(ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        public VirtoCommerceCustomerReviewsRESTAPIdocumentation(ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (credentials == null)
             {
@@ -170,7 +169,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         }
 
         /// <summary>
-        /// Initializes a new instance of the CustomerReviewsWebRESTAPIdocumentation class.
+        /// Initializes a new instance of the VirtoCommerceCustomerReviewsRESTAPIdocumentation class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -184,7 +183,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public CustomerReviewsWebRESTAPIdocumentation(System.Uri baseUri, ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
+        public VirtoCommerceCustomerReviewsRESTAPIdocumentation(System.Uri baseUri, ServiceClientCredentials credentials, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (baseUri == null)
             {
@@ -203,7 +202,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         }
 
         /// <summary>
-        /// Initializes a new instance of the CustomerReviewsWebRESTAPIdocumentation class.
+        /// Initializes a new instance of the VirtoCommerceCustomerReviewsRESTAPIdocumentation class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -220,7 +219,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public CustomerReviewsWebRESTAPIdocumentation(System.Uri baseUri, ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        public VirtoCommerceCustomerReviewsRESTAPIdocumentation(System.Uri baseUri, ServiceClientCredentials credentials, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (baseUri == null)
             {
@@ -282,7 +281,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
+namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -296,12 +295,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
     using System.Threading.Tasks;
     using VirtoCommerce.Storefront;
     using VirtoCommerce.Storefront.AutoRestClients;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi;
+    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi;
 
     /// <summary>
     /// </summary>
-    public partial interface ICustomerReviewsWebRESTAPIdocumentation : System.IDisposable
+    public partial interface IVirtoCommerceCustomerReviewsRESTAPIdocumentation : System.IDisposable
     {
         /// <summary>
         /// The base URI of the service.
@@ -336,7 +334,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
+namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -351,13 +349,12 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
     using System.Threading.Tasks;
     using VirtoCommerce.Storefront;
     using VirtoCommerce.Storefront.AutoRestClients;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi;
+    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi;
 
     /// <summary>
     /// CustomerReviews operations.
     /// </summary>
-    public partial class CustomerReviews : IServiceOperations<CustomerReviewsWebRESTAPIdocumentation>, ICustomerReviews
+    public partial class CustomerReviews : IServiceOperations<VirtoCommerceCustomerReviewsRESTAPIdocumentation>, ICustomerReviews
     {
         /// <summary>
         /// Initializes a new instance of the CustomerReviews class.
@@ -368,7 +365,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         /// <exception cref="System.ArgumentNullException">
         /// Thrown when a required parameter is null
         /// </exception>
-        public CustomerReviews(CustomerReviewsWebRESTAPIdocumentation client)
+        public CustomerReviews(VirtoCommerceCustomerReviewsRESTAPIdocumentation client)
         {
             if (client == null)
             {
@@ -378,9 +375,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
         }
 
         /// <summary>
-        /// Gets a reference to the CustomerReviewsWebRESTAPIdocumentation
+        /// Gets a reference to the VirtoCommerceCustomerReviewsRESTAPIdocumentation
         /// </summary>
-        public CustomerReviewsWebRESTAPIdocumentation Client { get; private set; }
+        public VirtoCommerceCustomerReviewsRESTAPIdocumentation Client { get; private set; }
 
         /// <param name='criteria'>
         /// </param>
@@ -785,7 +782,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
+namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -799,8 +796,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
     using System.Threading.Tasks;
     using VirtoCommerce.Storefront;
     using VirtoCommerce.Storefront.AutoRestClients;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi;
+    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi;
 
     /// <summary>
     /// CustomerReviews operations.
@@ -861,7 +857,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
+namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -875,8 +871,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
     using System.Threading.Tasks;
     using VirtoCommerce.Storefront;
     using VirtoCommerce.Storefront.AutoRestClients;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi;
+    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi;
 
     /// <summary>
     /// Extension methods for CustomerReviews.
@@ -961,7 +956,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.Models
+namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi.Models
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -975,8 +970,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
     using System.Threading.Tasks;
     using VirtoCommerce.Storefront;
     using VirtoCommerce.Storefront.AutoRestClients;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi;
+    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi;
 
     public partial class SortInfo
     {
@@ -1022,7 +1016,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.Models
+namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi.Models
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -1036,8 +1030,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
     using System.Threading.Tasks;
     using VirtoCommerce.Storefront;
     using VirtoCommerce.Storefront.AutoRestClients;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi;
+    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi;
 
     public partial class CustomerReviewSearchCriteria
     {
@@ -1054,10 +1047,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
         /// Initializes a new instance of the CustomerReviewSearchCriteria
         /// class.
         /// </summary>
-        public CustomerReviewSearchCriteria(IList<string> productIds = default(IList<string>), bool? isActive = default(bool?), string responseGroup = default(string), string objectType = default(string), IList<string> objectTypes = default(IList<string>), IList<string> objectIds = default(IList<string>), string searchPhrase = default(string), string languageCode = default(string), string sort = default(string), IList<SortInfo> sortInfos = default(IList<SortInfo>), int? skip = default(int?), int? take = default(int?))
+        public CustomerReviewSearchCriteria(IList<string> productIds = default(IList<string>), bool? isActive = default(bool?), string storeId = default(string), string responseGroup = default(string), string objectType = default(string), IList<string> objectTypes = default(IList<string>), IList<string> objectIds = default(IList<string>), string searchPhrase = default(string), string languageCode = default(string), string sort = default(string), IList<SortInfo> sortInfos = default(IList<SortInfo>), int? skip = default(int?), int? take = default(int?))
         {
             ProductIds = productIds;
             IsActive = isActive;
+            StoreId = storeId;
             ResponseGroup = responseGroup;
             ObjectType = objectType;
             ObjectTypes = objectTypes;
@@ -1085,6 +1079,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
         /// </summary>
         [JsonProperty(PropertyName = "isActive")]
         public bool? IsActive { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "storeId")]
+        public string StoreId { get; set; }
 
         /// <summary>
         /// </summary>
@@ -1142,7 +1141,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.Models
+namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi.Models
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -1156,8 +1155,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
     using System.Threading.Tasks;
     using VirtoCommerce.Storefront;
     using VirtoCommerce.Storefront.AutoRestClients;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi;
+    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi;
 
     public partial class CustomerReview
     {
@@ -1172,12 +1170,14 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
         /// <summary>
         /// Initializes a new instance of the CustomerReview class.
         /// </summary>
-        public CustomerReview(string authorNickname = default(string), string content = default(string), bool? isActive = default(bool?), string productId = default(string), System.DateTime? createdDate = default(System.DateTime?), System.DateTime? modifiedDate = default(System.DateTime?), string createdBy = default(string), string modifiedBy = default(string), string id = default(string))
+        public CustomerReview(string authorNickname = default(string), string content = default(string), bool? isActive = default(bool?), string productId = default(string), int? rating = default(int?), string storeId = default(string), System.DateTime? createdDate = default(System.DateTime?), System.DateTime? modifiedDate = default(System.DateTime?), string createdBy = default(string), string modifiedBy = default(string), string id = default(string))
         {
             AuthorNickname = authorNickname;
             Content = content;
             IsActive = isActive;
             ProductId = productId;
+            Rating = rating;
+            StoreId = storeId;
             CreatedDate = createdDate;
             ModifiedDate = modifiedDate;
             CreatedBy = createdBy;
@@ -1213,6 +1213,16 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
 
         /// <summary>
         /// </summary>
+        [JsonProperty(PropertyName = "rating")]
+        public int? Rating { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "storeId")]
+        public string StoreId { get; set; }
+
+        /// <summary>
+        /// </summary>
         [JsonProperty(PropertyName = "createdDate")]
         public System.DateTime? CreatedDate { get; set; }
 
@@ -1242,7 +1252,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.Models
+namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi.Models
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
@@ -1256,8 +1266,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi.
     using System.Threading.Tasks;
     using VirtoCommerce.Storefront;
     using VirtoCommerce.Storefront.AutoRestClients;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews;
-    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviews.WebModuleApi;
+    using VirtoCommerce.Storefront.AutoRestClients.CustomerReviewsModuleApi;
 
     public partial class GenericSearchResultCustomerReview
     {
