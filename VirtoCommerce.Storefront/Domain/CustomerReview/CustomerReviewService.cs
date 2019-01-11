@@ -38,6 +38,7 @@ namespace VirtoCommerce.Storefront.Domain
             }
 
             await _customerReviewsApi.UpdateAsync(new[] { review.ToCustomerReviewDto() });
+            CustomerReviewCacheRegion.ExpireRegion();
         }
 
         public void AddReview(Model.CustomerReviews.CustomerReview review)

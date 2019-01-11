@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +35,10 @@ namespace VirtoCommerce.Storefront.Controllers.Api
         {
             try
             {
+                review.StoreId = WorkContext.CurrentStore.Id;
+                review.IsActive = true;
+                review.CreatedBy = WorkContext.CurrentUser.OperatorUserName;
+                review.CreatedDate = DateTime.Now;
                 await _customerReviewService.AddReviewAsync(review);
             }
             catch (SubmitReviewDeniedException e)
@@ -55,6 +60,18 @@ namespace VirtoCommerce.Storefront.Controllers.Api
             var customerReviews = await _customerReviewService.SearchReviewsAsync(criteria);
 
             return Json(customerReviews);
+        }
+
+        [HttpGet("checksubmit")]
+        public ActionResult CheckIfSumbitReviewAvailable()
+        {
+            var result = _customerReviewService.CheckSubmitReviewRules();
+            return Json(
+                new
+                {
+                    result.IsValid,
+                    Message = result.ErrorsString
+                });
         }
     }
 }

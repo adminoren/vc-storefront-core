@@ -18,7 +18,9 @@ namespace VirtoCommerce.Storefront.Domain.CustomerReview
                 ModifiedBy = itemDto.ModifiedBy,
                 ModifiedDate = itemDto.ModifiedDate,
                 ProductId = itemDto.ProductId,
-                StoreId = itemDto.StoreId
+                StoreId = itemDto.StoreId,
+                Rating = itemDto.Rating
+
             };
 
             return result;
@@ -37,7 +39,8 @@ namespace VirtoCommerce.Storefront.Domain.CustomerReview
                 ModifiedBy = item.ModifiedBy,
                 ModifiedDate = item.ModifiedDate,
                 ProductId = item.ProductId,
-                StoreId = item.StoreId
+                StoreId = item.StoreId,
+                Rating = item.Rating
             };
 
             return result;
